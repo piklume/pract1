@@ -3,6 +3,8 @@
     flex-direction: row;
     justify-content: center;
     background-color: #0e0f11;
+    position: sticky; 
+    top: 0;
 
     .header-options {
         padding: 10px 30px;

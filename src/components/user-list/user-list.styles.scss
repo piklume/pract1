@@ -1,4 +1,8 @@
 .user-list-container {
     display: flex;
     flex-direction: column;
+
+    .user-card-div {
+        cursor: pointer;
+    }
 }
