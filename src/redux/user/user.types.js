@@ -1,0 +1,7 @@
+const UserActionTypes = {
+    FETCH_USERS_START: 'FETCH_USERS_START',
+    FETCH_USERS_SUCCESS:'FETCH_USERS_SUCCESS',
+    FECTH_USERS_FAILURE: 'FECTH_USERS_FAILURE'
+};
+
+export default UserActionTypes;

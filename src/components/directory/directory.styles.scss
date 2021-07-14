@@ -1,0 +1,9 @@
+.directory-container {
+    display: flex;
+    flex-direction: column;
+
+    .option-link {
+        padding: 20px;
+        color: aqua;
+    }
+}
