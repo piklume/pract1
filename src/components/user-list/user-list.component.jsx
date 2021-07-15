@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { selectUserCollection } from '../../redux/user/user.selectors';
@@ -6,25 +6,18 @@ import { createStructuredSelector } from 'reselect';
 
 import UserCard from '../user-card/user-card.component';
 
-import { fetchUsersStart } from '../../redux/user/user.actions';
 
 import './user-list.styles.scss';
 
 const UserList = (props) => {
     // console.log(userCollection);
     // console.log(props);
-    const { userCollection,fetchUsersStart,history } =  props;
-
-    useEffect(
-        () => {
-            fetchUsersStart();
-        }
-        ,[fetchUsersStart]
-    );
+    const { userCollection,history } =  props;
 
     const handelClick = (event) => {
-        const userId = event.target.id.slice(7);
+        const userId = event.currentTarget.id.slice(7);
         // history.push(`/userpage/:${userId}`);
+        // console.log(event.currentTarget.id);
         history.push({
             pathname: '/userpage',
             state: { detail: userId }
@@ -48,8 +41,4 @@ const mapStateToProps = createStructuredSelector({
     userCollection: selectUserCollection
 });
 
-const mapDispatchToProps = dispatch => ({
-    fetchUsersStart: () => dispatch(fetchUsersStart())
-});
-
-export default withRouter(connect(mapStateToProps,mapDispatchToProps)(UserList));
+export default withRouter(connect(mapStateToProps)(UserList));

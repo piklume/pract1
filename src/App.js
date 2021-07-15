@@ -4,10 +4,12 @@ import { Switch, Route, useLocation } from 'react-router-dom';
 import './App.css';
 
 import Homepage from './pages/homepage/homepage.component';
-import UserList from './components/user-list/user-list.component';
-import PostList from './components/post-list/post-list.component';
+import UserListPage from './components/user-list-page/user-list-page.component';
+import PostListPage from './components/post-list-page/post-list-page.components';
 import Header from './components/Header/header.component';
-import UserPage from './components/user-page/user-page.component';
+import UserPagePage from './components/user-page-page/user-page-page.component';
+// import UserPageContainer from './components/user-page/user-page.container';
+import SignInSignUp from './pages/sign-in-sign-up/sign-in-sign-up.component';
 
 function App() {
   const { pathname } = useLocation();
@@ -20,9 +22,10 @@ function App() {
       <header className="App-header"> 
         <Switch>
           <Route exact path='/' component={Homepage} />
-          <Route path='/users' component={UserList} />
-          <Route path='/posts' component={PostList} />
-          <Route path='/userpage' component={UserPage} />
+          <Route path='/users' component={UserListPage} />
+          <Route path='/posts' component={PostListPage} />
+          <Route path='/userpage' component={UserPagePage} />
+          <Route path='/signin' component={SignInSignUp} />
         </Switch>
       </header>
     </div>

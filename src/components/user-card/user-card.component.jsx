@@ -8,14 +8,16 @@ const UserCard = ({ user,handelClick }) => {
         // console.log('usercard',user);
         return (
             <div className='user-container' id={`userid-${id}`} onClick={handelClick}>
-                <h2>{name}</h2>
-                <h3>{username}</h3>
-                <h4>{email}</h4>
+                <div className='user-inner-container'>
+                    <h2>{name}</h2>
+                    <h3>{username}</h3>
+                    <h4>{email}</h4>
+                </div>
             </div>
         )
     } else {
         return (
-            <div className='user-container-undefined'>
+            <div className='user-container-undefined' onClick={handelClick}>
                 <h4>User is undefined, re-route from user list again lol</h4>
             </div>
         );

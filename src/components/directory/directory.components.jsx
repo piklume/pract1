@@ -9,6 +9,7 @@ const Directory = () => {
         <div className='directory-container'>
             <Link className='option-link' to="/users">USERS</Link>
             <Link className='option-link' to="/posts">POSTS</Link>
+            <Link className='option-link' to="/signin">SIGN-IN</Link>
         </div>
     );
 }

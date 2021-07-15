@@ -20,3 +20,7 @@ export const selectUser = userId => {
     )
 };
 
+export const isUserFetching = createSelector(
+    [selectUsers],
+    users => users.isFetching
+);

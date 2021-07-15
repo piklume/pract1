@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './post-card.styles.scss';
+
 const PostCard = ({ post: {id, title, body}}) => {
     return (
         <div className='post-container'>
